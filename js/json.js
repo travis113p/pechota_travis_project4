@@ -1,9 +1,10 @@
-var jsonPizza = {
+var json = {
 	"pizza1": {
 		"pizzasize": ["Pizza Size:", "Small"],
 		"pizzastyle": ["Pizza Style:", "Deep Dish"],
 		"pepperoni": ["Pepperoni:", "No"],
 		"sausage": ["Sausage:", "Yes"],
+		"ham": ["Ham:", "No"],
 		"gp": ["Green Peppers:", "No"],
 		"bp": ["Banana Peppers:", "Yes"],
 		"bacon": ["Bacon:", "Yes"],
@@ -11,12 +12,13 @@ var jsonPizza = {
 		"sauce": ["Sauce:", "7"],
 		"date": ["Delivery Date:", "2013-05-22"],
 		"comments": ["Additional Comments:", "Cut in quarters."]
-	}
+	},
 	"pizza2": {
 		"pizzasize": ["Pizza Size:", "Medium"],
 		"pizzastyle": ["Pizza Style:", "Thin Crust"],
 		"pepperoni": ["Pepperoni:", "Yes"],
-		"sausage": ["Sausage:", "No"],
+		"sausage": ["Sausage:", "Yes"],
+		"ham": ["Ham:", "Yes"],
 		"gp": ["Green Peppers:", "Yes"],
 		"bp": ["Banana Peppers:", "Yes"],
 		"bacon": ["Bacon:", "No"],

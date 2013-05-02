@@ -152,7 +152,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	function getData(){
 		toggleControls("on");
 		if(localStorage.length === 0){
-			alert("There is nothing in your current order.");
+			alert("There is nothing in your current order.  Default order was added.");
+			autoFillOrder();
 		};
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
@@ -180,8 +181,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 
-	//load JSON data
-	function autoFillOrder(){}
+	//add json data
+	function autoFillOrder(){
+		for(var n in json){
+			var id = Math.floor(Math.random()*100000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+		}
+	}
 
 	//edit and delete item links
 	function makeItemLinks(key, linksLi){ 
@@ -319,7 +325,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 
 	//variable defaults
-	var pizzaSizes = ["--Choose A Size--", "Small ($5.00)", "Medium ($7.50)", "Large ($10.00)"],
+	var pizzaSizes = ["--Choose A Size--", "Small", "Medium", "Large"],
 		pizzaStyles = ["--Choose A Style--", "Deep Dish", "Classic", "Thin Crust"],
 		pepperoniValue = "No",
 		sausageValue = "No",
