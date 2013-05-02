@@ -1,6 +1,5 @@
 Travis Pechota
-VFW 1304
-Project 4 
+VFW 1304 - Project 4 
 project4.txt
 
 Git Hub Link:
