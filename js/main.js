@@ -180,6 +180,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		};
 	};
 
+	//load JSON data
+	function autoFillOrder(){}
+
 	//edit and delete item links
 	function makeItemLinks(key, linksLi){ 
 
