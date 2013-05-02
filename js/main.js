@@ -189,7 +189,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		var imgSize = document.createElement("img");
 		var setSource = imgSize.setAttribute("src", "images/" + makeSize + ".png");
 		imageLi.appendChild(imgSize);
-	}
+	};
 
 
 	//add json data
@@ -197,8 +197,8 @@ window.addEventListener("DOMContentLoaded", function(){
 		for(var n in json){
 			var id = Math.floor(Math.random()*100000001);
 			localStorage.setItem(id, JSON.stringify(json[n]));
-		}
-	}
+		};
+	};
 
 	//edit and delete item links
 	function makeItemLinks(key, linksLi){ 
