@@ -1,3 +1,9 @@
+/*
+Travis Pechota
+VFW 1304 - Project 4
+json.js
+*/
+
 var json = {
 	"pizza1": {
 		"pizzasize": ["Pizza Size:", "Small"],
@@ -27,4 +33,4 @@ var json = {
 		"date": ["Delivery Date:", "2013-05-29"],
 		"comments": ["Additional Comments:", "Allergic to dogs."]
 	}
-}
+};
