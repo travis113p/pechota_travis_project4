@@ -152,8 +152,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	function getData(){
 		toggleControls("on");
 		if(localStorage.length === 0){
-			alert("There is nothing in your current order.  Default order was added.");
 			autoFillOrder();
+			alert("There is nothing in your current order.  Default order was added.");
 		};
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
@@ -170,6 +170,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement("ul");
 			makeli.appendChild(makeSubList);
+			sizeImage(obj.pizzasize[1], makeSubList);
 			for (var n in obj){
 				var makeSubli = document.createElement("li");
 				makeSubList.appendChild(makeSubli);
@@ -180,6 +181,16 @@ window.addEventListener("DOMContentLoaded", function(){
 			makeItemLinks(localStorage.key(i), linksLi);
 		};
 	};
+
+	//add images to object
+	function sizeImage(makeSize, makeSubList){
+		var imageLi = document.createElement("li");
+		makeSubList.appendChild(imageLi);
+		var imgSize = document.createElement("img");
+		var setSource = imgSize.setAttribute("src", "images/" + makeSize + ".png");
+		imageLi.appendChild(imgSize);
+	}
+
 
 	//add json data
 	function autoFillOrder(){
